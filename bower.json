@@ -1,0 +1,22 @@
+{
+  "name": "twist",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "modernizr": "~2.8.1",
+    "threejs": "*",
+    "underscore": "~1.8.3",
+    "gsap": "~1.17.0",
+    "dat-gui": "~0.5.1",
+    "threex.universalloader": "*"
+  },
+  "devDependencies": {
+    "chai": "~3.0.0",
+    "mocha": "~2.2.5"
+  },
+  "overrides": {
+    "dat-gui": {
+      "main": "build/dat.gui.js"
+    }
+  }
+}
