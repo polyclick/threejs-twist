@@ -1,5 +1,5 @@
 # threejs-twist
-Combining a custom twist morph vertex shader with the build-in threejs lambert shader.
+Combining a custom twist morph vertex shader with the build-in threejs lambert shader.  
 Mesh twister shader code from: http://www.ozone3d.net/tutorials/mesh_deformer_p3.php
 
 ```
