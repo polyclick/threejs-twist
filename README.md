@@ -9,6 +9,13 @@ new_y = y
 new_z = x * sin(angle) + z * cos(angle)
 ```
 
+## previews
 ![alt tag](https://raw.github.com/polyclick/threejs-twist/master/readme-assets/walt-preview.png)
-
 ![alt tag](https://raw.github.com/polyclick/threejs-twist/master/readme-assets/bust-preview.png)
+
+## how to run
+```
+npm install
+bower install
+gulp serve
+```
