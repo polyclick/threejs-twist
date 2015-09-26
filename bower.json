@@ -2,13 +2,15 @@
   "name": "twist",
   "private": true,
   "dependencies": {
-    "jquery": "~2.1.1",
+    "jquery": "~2.1.4",
     "modernizr": "~2.8.1",
-    "threejs": "*",
     "underscore": "~1.8.3",
-    "gsap": "~1.17.0",
+    "gsap": "~1.18.0",
     "dat-gui": "~0.5.1",
-    "threex.universalloader": "*"
+    "threex.universalloader": "*",
+    "three.js": "threejs#r71",
+    "chai": "~3.3.0",
+    "mocha": "~2.3.3"
   },
   "devDependencies": {
     "chai": "~3.0.0",
@@ -18,5 +20,10 @@
     "dat-gui": {
       "main": "build/dat.gui.js"
     }
+  },
+  "resolutions": {
+    "gsap": "~1.18.0",
+    "chai": "~3.3.0",
+    "mocha": "~2.3.3"
   }
 }
