@@ -1,6 +1,54 @@
-node_modules
-dist
+# cache & temp stuff
 .tmp
 .sass-cache
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# component dirs
 bower_components
-test/bower_components
+node_modules
+jspm_packages
+
+# compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# compressed files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# os generated folders
+Network Trash Folder
+Temporary Items
+
+# os generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.AppleDouble
+.LSOverride
+.DocumentRevisions-V100
+.fseventsd
+.TemporaryItems
+.VolumeIcon.icns
+.AppleDB
+.AppleDesktop
+.apdisk
+Icon
