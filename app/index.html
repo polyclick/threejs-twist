@@ -3,9 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>twist</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500' rel='stylesheet' type='text/css'>
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
@@ -21,6 +23,41 @@
     <!-- endbuild -->
   </head>
   <body>
+    <div class="description">
+      <div class="message">
+        <div class="content">
+          <div class="title">twist vertex shader combined with three.js MeshLambertMaterial</div>
+          <p>refresh the page to load a random 3d model</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fallback-wrapper">
+      <div class="fallback">
+        <div class="fallback-content">
+          <div class="message icon">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="52.963px" height="52.963px" viewBox="0 0 52.963 52.963" style="enable-background:new 0 0 52.963 52.963;" xml:space="preserve">
+              <path d="M52.962,28.833l-10.788-5.752V10.572l-0.054,0.031l0.056-0.036L31.111,4.668l-10.018,5.645L10.507,4.668L0,10.588 l0.046,0.027v12.633L0,23.27l0.046,0.027v0.235v12.682L10.8,42.7v0.011l0.007-0.005l0.01,0.005v-0.009l10.754-6.486V24.087 l9.833,5.933v0.01l0.008-0.004l0.01,0.004v-0.01l0.016-0.011v11.788l10.754,6.486v0.011l0.008-0.005l0.01,0.005v-0.011 l10.754-6.486V28.836l-0.054,0.031L52.962,28.833z M20.65,22.482l-9.497-4.117l-0.002-1.043l9.499-5.705V22.482z M16.611,25.462 l-5.438,3.151l-0.018-9.159l8.965,3.888L16.611,25.462z M11.017,5.882l9.199,4.72l-9.199,5.559V5.882z M10.017,5.907v10.11 l-8.68-5.23L10.017,5.907z M0.872,11.562l9.119,5.499v1.266L0.872,22.52V11.562z M1.951,23.125l8.04-3.697v9.142L1.44,23.412 L1.951,23.125z M9.991,41.25l-8.6-5.187l8.6-3.955V41.25z M9.991,31.007l-9.119,4.194V24.244l9.119,5.499V31.007z M11.172,41.295 l-0.018-9.158l9.051,3.924L11.172,41.295z M20.744,35.206l-9.591-4.158l-0.002-1.043l9.593-5.761V35.206z M30.595,28.567 l-8.6-5.186l8.6-3.955V28.567z M30.595,18.326l-9.025,4.15V11.619l9.025,5.442V18.326z M30.622,16.018l-8.68-5.23l8.68-4.88V16.018 z M31.759,19.456l9.052,3.925l-9.033,5.233L31.759,19.456z M41.348,22.523l-9.591-4.158l-0.002-1.043l9.593-5.761V22.523z M31.622,5.882l9.198,4.72l-9.198,5.559V5.882z M41.381,46.833l-8.6-5.186l8.6-3.955V46.833z M41.381,36.59l-9.119,4.193V29.827 l9.119,5.498V36.59z M41.408,34.282l-8.531-5.141l4.221-2.545l4.312-2.425L41.408,34.282L41.408,34.282z M42.408,24.147l9.199,4.72 l-9.199,5.559V24.147z M42.562,46.878l-0.018-9.159l9.051,3.926L42.562,46.878z M52.134,40.789l-9.591-4.158l-0.002-1.043 l9.593-5.761V40.789z"/>
+            </svg>
+            <div class="content">
+              <div class="title">No Webgl</div>
+              <p>
+                We're sorry but your web browser doesn't support WebGL. <br/>
+                You might want to try to update your current browser or get a totally new, fresh & up to date <a href="http://browsehappy.com" target="_blank">alternative browser</a>.<br/>
+              </p>
+            </div>
+          </div>
+          <div class="message">
+            <p><b>In the meantime, here's an alternative version of the experiment:</b></p>
+          </div>
+
+          <div class="video">
+            <iframe src="https://player.vimeo.com/video/131418877?color=00aeef&title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
@@ -30,10 +67,12 @@
     <script src="/bower_components/threex.universalloader/threex.universalloader.js"></script>
     <script src="/bower_components/three.js/build/three.js"></script>
     <!-- endbower -->
-
+    <!-- manual -->
     <script src="/bower_components/three.js/examples/js/loaders/ctm/lzma.js"></script>
     <script src="/bower_components/three.js/examples/js/loaders/ctm/ctm.js"></script>
     <script src="/bower_components/three.js/examples/js/loaders/ctm/CTMLoader.js"></script>
+    <script src="/bower_components/three.js/examples/js/Detector.js"></script>
+    <!-- endmanual -->
     <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->

@@ -22,6 +22,11 @@ function Application() {
 
 Application.prototype = {
   init: function() {
+    if (!Detector.webgl) {
+      $('html').addClass('detector-no-webgl');
+      return;
+    }
+
     this.load(function(){
       this.createScene();
       this.addListeners();
@@ -141,11 +146,17 @@ Application.prototype = {
     // resize
     window.addEventListener('resize', this.resize.bind(this), false);
 
-    // mouse move
-    $(window).mousemove(function(event){
-      var delta = (-2 * event.pageX / $(window).width()) + 1;
-      TweenMax.to(this.params, 0.25, { delta: delta });
-    }.bind(this));
+    // mouse move on non-touch devices
+    // on touch devices, emulate the movement of the mouse by animating the delta manually
+    if(!Modernizr.touch) {
+      $(window).mousemove(function(event){
+        var delta = (-2 * event.pageX / $(window).width()) + 1;
+        TweenMax.to(this.params, 0.25, { delta: delta });
+      }.bind(this));
+    } else {
+      this.params.delta = -1;
+      TweenMax.to(this.params, 2, { delta: 1, yoyo:true, repeat:-1, ease:Power1.easeInOut });
+    }
   },
 
   tick: function() {
