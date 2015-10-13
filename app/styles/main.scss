@@ -1,6 +1,8 @@
 // bower:scss
 // endbower
 
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,500);
+
 body, html {
   overflow:hidden;
   margin:0;
@@ -11,12 +13,16 @@ body, html {
 
 body {
   background: #fafafa url('../images/marble.jpg') no-repeat center center;
+  background-size:cover;
   font-family: 'Ubuntu', sans-serif;
   font-size:12px;
   line-height:1.5;
   color: #333;
-  background-size:cover;
+
   font-smoothing: subpixel-antialiased;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
 }
 
 .message {
@@ -55,9 +61,12 @@ body {
 }
 
 .description {
+  position:absolute;
+  top:10px;
   display:block;
   text-align:center;
-  margin-top:10px;
+  width:100%;
+  z-index:5000;
 
   .detector-no-webgl & {
     display:none;
