@@ -75,7 +75,7 @@ gulp.task('extras', function () {
 
 gulp.task('assets', function () {
   return gulp.src([
-    'app/obj/**/*'
+    'app/objects/**/*'
   ], {
     base:'app'
   }).pipe(gulp.dest('dist'));

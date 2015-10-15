@@ -35,8 +35,8 @@ Network Trash Folder
 Temporary Items
 
 # os generated files
-#.DS_Store
-#.DS_Store?
+.DS_Store
+.DS_Store?
 ._*
 .Spotlight-V100
 .Trashes
@@ -52,3 +52,6 @@ Thumbs.db
 .AppleDesktop
 .apdisk
 Icon
+
+# project specific
+dist
