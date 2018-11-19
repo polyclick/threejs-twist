@@ -1,7 +1,7 @@
 # threejs-twist
 combining a custom twist morph vertex shader with the build-in threejs lambert shader.  
 mesh twister shader code from: http://www.ozone3d.net/tutorials/mesh_deformer_p3.php  
-demo on: http://twist.polyclick.io/
+demo on: http://polyclick.io/sketches/twist
 
 ```
 new_x = x * cos(angle) - z * sin(angle) 
